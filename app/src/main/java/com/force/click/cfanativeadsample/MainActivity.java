@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
                 LinearLayout adContainer = (LinearLayout)findViewById(R.id.native_ad_container);
                 LayoutInflater inflater = LayoutInflater.from(context);
-                adView = (LinearLayout)inflater.inflate(R.layout.native_ad_layout_2,adContainer,false);
+                adView = (LinearLayout)inflater.inflate(R.layout.native_ad_layout,adContainer,false);
                 adContainer.addView(adView);
 
                 TextView nativeAdTitle = (TextView)adView.findViewById(R.id.native_ad_title);
