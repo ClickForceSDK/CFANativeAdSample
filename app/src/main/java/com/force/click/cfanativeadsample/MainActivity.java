@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         nativeAd = new CFNativeAd(this);
-        nativeAd.setAdID("5229");
+        nativeAd.setAdID("8384");
+        nativeAd.outputDebugInfo=true;
         nativeAd.setOnNativeListener(new AdNativeListener() {
             @Override
             public void onNativeAdResult(CFNativeAd cfNativeAd) {
@@ -56,9 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 List<View> clickListView = new ArrayList<>();
                 clickListView.add(nativeAdTitle);
                 clickListView.add(nativeAdButtonText);
-                cfNativeAd.registerViewForInteraction(clickListView);
-
-                cfNativeAd.setActiveViewLog(adContainer);
+                cfNativeAd.registerViewForInteraction(adContainer,clickListView);
             }
 
             @Override
